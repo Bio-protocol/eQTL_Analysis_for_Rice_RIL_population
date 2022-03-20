@@ -101,6 +101,6 @@ abline(h=-log10(6.12e-04), col="red", lty=2, lwd=3)
 - flag_leaf005.trans.nominal.hits.txt.gz 
 - flag_leaf_trans_005_permutations_all.txt（ Compare to the “flag_leaf005.trans.nominal.hits.txt.gz”,this file has an additional column that gives the estimated false discovery rate (FDR) for each eTrait by 100 permutations.）
 ### Manhattan plot of OsAffx.30643.1.S1_at
-![图片名称](https://github.com/ziongfen/protocol/blob/main/graphs/Rplot.png)
+![图片名称](https://github.com/ziongfen/protocol/blob/main/graphs/manhattanplot.png)
 # License
 It is a free and open source software, licensed under (choose a license from the suggested list: [GPLv3](https://github.com/github/choosealicense.com/blob/gh-pages/_licenses/gpl-3.0.txt), [MIT](https://github.com/github/choosealicense.com/blob/gh-pages/LICENSE.md), or [CC BY 4.0](https://github.com/github/choosealicense.com/blob/gh-pages/_licenses/cc-by-4.0.txt)).
