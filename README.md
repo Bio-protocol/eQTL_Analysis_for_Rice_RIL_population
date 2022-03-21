@@ -79,6 +79,7 @@ zcat flag_leaf005_trans_perm_*.hits.txt.gz | gzip -c > flag_leaf005_permutations
 Rscript runFDR_ftrans.R flag_leaf005.trans.nominal.hits.txt.gz flag_leaf005_permutations_all.txt.gz flag_leaf_trans_005_permutations_all.txt
 ``` 
 ### Step 4: Draw Manhattan diagram with R script
+#### Note:We have made changes to qqman's Manhattan function,The modified document is [Manhattan_function.R](https://github.com/ziongfen/eQTL_Analysis_for_Rice_RIL_population-1/blob/master/lib/Manhattan_function.R).
        sh get_Ehd1_eQTL_result.sh
 - Script content of get_Ehd1_eQTL_result.sh
 ```ruby 
@@ -91,10 +92,7 @@ library('qqman')
 data <- read.table(" Ehd1_eQTL_result.txt ")
 data <-data[,c(4,5,6,7)]
 colnames(data)<-c('SNP','CHR','BP','P')
-manhattan(data,main = "Manhattan Plot",suggestiveline =FALSE,genomewideline = FALSE,csi=1.5,cex.lab=1.5, cex.axis=1.5,cex.main=1.5,annotatePval = 5e-40, annotateTop = FALSE,xlim=c(32284500,155000000),ylim=c(0,50),cex = 1.5)
-abline(h=-log10(6.17e-04), col="blue", lty=1, lwd=3) 
-abline(h=-log10(6.12e-04), col="red", lty=2, lwd=3)
-par(mar = c(4,4.5,4.5,4.5))
+manhattan(data,main = "Manhattan Plot",suggestiveline =-log10(6.17e-04),genomewideline = -log10(6.12e-04),cex.lab=1.2, cex.axis=1.5,cex.main=1.5,annotatePval = 5e-40,annotateTop = FALSE,xlim=c(32284500,155000000),ylim=c(0,50),cex = 1.5)
 ``` 
 # Expected results
 ### You will get cis-eQTL results and trans-eQTL results files
@@ -103,6 +101,6 @@ par(mar = c(4,4.5,4.5,4.5))
 - flag_leaf_trans_005_permutations_all.txt（ Compare to the “flag_leaf005.trans.nominal.hits.txt.gz”,this file has an additional column that gives the estimated false discovery rate (FDR) for each eTrait by 100 permutations.）
 ### Note：When drawing a Manhattan diagram we will take a base of 10 for the value of P.
 ### Manhattan plot of OsAffx.30643.1.S1_at
-![图片名称](https://github.com/ziongfen/eQTL_Analysis_for_Rice_RIL_population-1/blob/master/graphs/Manhattan.png)
+![图片名称](https://github.com/ziongfen/eQTL_Analysis_for_Rice_RIL_population-1/blob/master/graphs/Rplot.png)
 # License
 It is a free and open source software, licensed under (choose a license from the suggested list: [GPLv3](https://github.com/github/choosealicense.com/blob/gh-pages/_licenses/gpl-3.0.txt), [MIT](https://github.com/github/choosealicense.com/blob/gh-pages/LICENSE.md), or [CC BY 4.0](https://github.com/github/choosealicense.com/blob/gh-pages/_licenses/cc-by-4.0.txt)).
