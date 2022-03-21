@@ -79,7 +79,7 @@ zcat flag_leaf005_trans_perm_*.hits.txt.gz | gzip -c > flag_leaf005_permutations
 Rscript runFDR_ftrans.R flag_leaf005.trans.nominal.hits.txt.gz flag_leaf005_permutations_all.txt.gz flag_leaf_trans_005_permutations_all.txt
 ``` 
 ### Step 4: Draw Manhattan diagram with R script
-##We have made changes to qqman's Manhattan function,The modified document is Manhattan_function.R
+#### Notte:We have made changes to qqman's Manhattan function,The modified document is Manhattan_function.R.
        sh get_Ehd1_eQTL_result.sh
 - Script content of get_Ehd1_eQTL_result.sh
 ```ruby 
