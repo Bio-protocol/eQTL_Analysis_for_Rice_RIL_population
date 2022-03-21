@@ -1,4 +1,4 @@
-### The first 16 columns of the output file 'flage_leaf_cis_permutation.txt' is include:
+## The first 16 columns of the output file 'flage_leaf_cis_permutation.txt' is include:
 1.	eTrait ID
 2.	Chromosome ID of the eTrait gene
 3.	Start position of the eTrait gene
@@ -16,7 +16,7 @@
 15.	The second parameter value of the fitted beta distribution
 16.	The nominal P-value of association between the eTrait gene and the top bin in cis
 
-### the first 9 columns of the output file 'flag_leaf005.trans.nominal.hits.txt.gz' is include:
+## the first 9 columns of the output file 'flag_leaf005.trans.nominal.hits.txt.gz' is include:
 
 1.	eTrait ID
 2.	Chromosome ID of the eTrait gene
