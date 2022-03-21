@@ -12,29 +12,43 @@ In the following protocol, we explain how to use QTLtools to identify cis- and t
 6. **workflow:** Step by step pipeline. 
 # Installation
 ## Required software and installation:
-### Installing [Anaconda](https://www.anaconda.com/) 
-- wget https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/Anaconda3-4.1.0-Linux-x86.sh
-- bash Anaconda3-4.1.0-Linux-x86.sh
-- echo 'export PATH="~/anaconda3/bin:$PATH"' >> ~/.bashrc
-- source ~/.bashrc
+### Installing [Anaconda](https://www.anaconda.com/)
+```ruby 
+wget https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/Anaconda3-4.1.0-Linux-x86.sh
+bash Anaconda3-4.1.0-Linux-x86.sh
+echo 'export PATH="~/anaconda3/bin:$PATH"' >> ~/.bashrc
+source ~/.bashrc
+```
 ### conda environment
-- conda create -n eQTL_Analysis_for_Rice_RIL_population
-- conda activate eQTL_Analysis_for_Rice_RIL_population
+```ruby 
+conda create -n eQTL_Analysis_for_Rice_RIL_population
+conda activate eQTL_Analysis_for_Rice_RIL_population
+```
 ### Installing [Htslib](https://github.com/samtools/htslib/)
-- conda install -c bioconda htslib
+```ruby
+conda install -c bioconda htslib
+```
 ### Installing [Bcftools](https://github.com/samtools/bcftools/)
-- conda install -c bioconda bcftools
+```ruby
+conda install -c bioconda bcftools
+```
 ### Installing [Samtools](https://github.com/samtools/samtools/)
-- conda install -c bioconda samtools 
+```ruby
+conda install -c bioconda samtools 
+```
 ### Installing [R 3.6.1](http://www.R-project.org/)
-- conda install r-base=3.6.1
+```ruby
+conda install r-base=3.6.1
+```
 ### Installing [QTLtools](https://qtltools.github.io/qtltools/)(download and unzip to use)
-- wget https://qtltools.github.io/qtltools/binaries/QTLtools_1.2_CentOS7.8_x86_64.tar.gz
-- tar xzvf QTLtools_1.2_CentOS7.8_x86_64.tar.gz
-- cd QTLtools_1.2_CentOS7.8_x86_64
-- ln -s QTLtools_1.2_CentOS7.8_x86_64 QTLtools
-- echo 'export PATH="~/QTLtools_1.2_CentOS7.8_x86_64:$PATH"' >> ~/.bashrc
-- source ~/.bashrc
+```ruby
+wget https://qtltools.github.io/qtltools/binaries/QTLtools_1.2_CentOS7.8_x86_64.tar.gz
+tar xzvf QTLtools_1.2_CentOS7.8_x86_64.tar.gz
+cd QTLtools_1.2_CentOS7.8_x86_64
+ln -s QTLtools_1.2_CentOS7.8_x86_64 QTLtools
+echo 'export PATH="~/QTLtools_1.2_CentOS7.8_x86_64:$PATH"' >> ~/.bashrc
+source ~/.bashrc
+```
 # Input Data
 The raw data are available from the National Center for Biotechnology Information Gene Expression Omnibus database under the accession number GSE49020.
 - a.	Genotype data（VCF/BCF format）:eQTL_genotype.vcf
