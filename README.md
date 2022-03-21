@@ -88,7 +88,7 @@ zcat flag_leaf005.trans.nominal.hits.txt.gz | grep OsAffx.30643.1.S1_at > Ehd1_e
         Rscript Manhattan.R
 - Script content of Manhattan.R
 ```ruby 
-library('qqman')
+source('Manhattan_function.R')
 data <- read.table(" Ehd1_eQTL_result.txt ")
 data <-data[,c(4,5,6,7)]
 colnames(data)<-c('SNP','CHR','BP','P')
