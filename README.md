@@ -69,11 +69,11 @@ tabix flag_leaf_eTrait.bed.gz
 ```ruby 
 QTLtools cis --vcf eQTL_genotype.vcf.gz --bed flag_leaf_eTrait.bed.gz --permute 1000 --out flag_leaf_eTrait_cis_permutation.txt > running.log
 ``` 
-### Note:We can also use --norminal to enforce the eTraits to be normally distributed,for example:
+### Note:We can also use --nominal to enforce the eTraits to be normally distributed,for example:
 ```ruby 
-QTLtools cis --vcf eQTL_genotype.vcf.gz --bed flag_leaf_eTrait.bed.gz --norminal 0.05 --out flag_leaf_eTrait_cis_permutation.txt > running.log
+QTLtools cis --vcf eQTL_genotype.vcf.gz --bed flag_leaf_eTrait.bed.gz --nominal 0.05 --out flag_leaf_eTrait_cis_permutation.txt > running.log
 ``` 
-#### --norminal 0.05 to only output eTrait pairs with a nominal p-value below 0.05.
+#### --nominal 0.05 to only output eTrait pairs with a nominal p-value below 0.05.
 
 ### Step 3: trans-eQTL identification with QTLtools
 The command 1 will generate three output files, one named “*.best.txt.gz” containing the top eQTL for each eTrait, one named “*.bins.txt.gz” containing all eQTLs with P-values below the specified threshold, and the last named “*.hits.txt.gz”, containing the details of all eQTLs with P-values above the specified threshold. The command 2 permutes all eTraits and generate three files like the command 1. The command 3 will generate the file “flag_leaf_trans_005_permutations_all.txt” which contains the data in “*.hits.txt.gz” and with an additional column that gives the estimated false discovery rate (FDR) for each eTrait by 100 permutations.
