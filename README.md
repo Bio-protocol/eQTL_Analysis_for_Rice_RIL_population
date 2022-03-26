@@ -71,7 +71,7 @@ QTLtools cis --vcf eQTL_genotype.vcf.gz --bed flag_leaf_eTrait.bed.gz --permute 
 ``` 
 ### Note:We can also use --normal to enforce the eTraits to be normally distributed,for example:
 ```ruby 
-QTLtools cis --vcf eQTL_genotype.vcf.gz --bed flag_leaf_eTrait.bed.gz --permute 1000 --out flag_leaf_eTrait_cis_permutation.txt > running.log
+QTLtools cis --vcf eQTL_genotype.vcf.gz --bed flag_leaf_eTrait.bed.gz --permute 1000 --out flag_leaf_eTrait_cis_permutation.txt --normal> running.log
 ``` 
 
 ### Step 3: trans-eQTL identification with QTLtools
